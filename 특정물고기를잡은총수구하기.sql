@@ -1,0 +1,7 @@
+-- 잡은 BASS와 SNAPPER의 수
+-- CASE WHEN 구문 + SUM()  확인
+
+select 
+    SUM(CASE WHEN FISH_NAME='BASS' or FISH_NAME='SNAPPER' THEN 1 ELSE 0 END) as FISH_COUNT
+from FISH_INFO fi
+join FISH_NAME_INFO fni on fi.FISH_TYPE = fni.FISH_TYPE

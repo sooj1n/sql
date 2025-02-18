@@ -1,0 +1,6 @@
+-- 10cm 이하인 물고기의 수
+-- null 체크 IS NULL
+
+SELECT count(ID) AS FISH_COUNT
+FROM FISH_INFO
+WHERE LENGTH IS NULL
